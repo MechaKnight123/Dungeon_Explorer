@@ -7,7 +7,7 @@ namespace DungeonExplorer
     {
         private Player player;
         private Room currentRoom;
-        private Item item;
+        
         
         public Game()
         {
