@@ -12,7 +12,10 @@ namespace DungeonExplorer
         public Game()
         {
             // Initialize the game with one room and one player
-
+            Player player = new Player();
+            Console.WriteLine("Please enter your name: ");
+            string name=Console.ReadLine();
+            player.Players(name);
         }
         public void Start()
         {

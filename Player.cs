@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DungeonExplorer
 {
@@ -8,10 +9,11 @@ namespace DungeonExplorer
         public int Health { get; private set; }
         private List<string> inventory = new List<string>();
 
-        public Player(string name, int health) 
+        public void Players(string name, int health=100) 
         {
             Name = name;
             Health = health;
+            Console.WriteLine("Player name is: "+ Name+ " and current health is: "+Health);
         }
         public void PickUpItem(string item)
         {
