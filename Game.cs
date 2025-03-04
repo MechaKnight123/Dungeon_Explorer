@@ -13,9 +13,15 @@ namespace DungeonExplorer
         {
             // Initialize the game with one room and one player
             Player player = new Player();
+            Room currentRoom = new Room();
+
             Console.WriteLine("Please enter your name: ");
             string name=Console.ReadLine();
             player.Players(name);
+
+            Console.WriteLine("Please enter the Room name to start the game (bedroom/bathroom/dining room): ");
+            string Roomname = Console.ReadLine();
+            string description = currentRoom.GetDescription(Roomname);
         }
         public void Start()
         {
@@ -24,7 +30,9 @@ namespace DungeonExplorer
             while (playing)
             {
                 // Code your playing logic here
+
             }
         }
     }
 }
+
