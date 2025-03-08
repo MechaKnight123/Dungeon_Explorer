@@ -11,8 +11,8 @@ namespace DungeonExplorer
         
         public Game()
         {
-            // Initialize the game with one room and one player
-            
+            // Initialize the game with one room with a description, item and a name
+            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Patio");
         }
         public void Start()
         {
