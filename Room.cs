@@ -6,7 +6,7 @@
         private string description;
         private string item;
 
-        public string Room(string description, string item, string name)
+        public Room(string description, string item, string name)
         {
             this.description = description;
             this.item = item;

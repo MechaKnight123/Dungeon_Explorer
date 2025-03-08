@@ -36,7 +36,7 @@ namespace DungeonExplorer
                 string initialIntro = "Enter 1 to add an item, 2. to view room's description and 3. to get current items and health.";
                
                 //An intro message to the game is displayed and users input is store in the variable nextStep 
-                Console.WriteLine($"Hey {playersName}. Welcome to the dungeons! \n{initialIntro}");
+                Console.WriteLine($"\nHey {playersName}. Welcome to the dungeons! \n{initialIntro}");
                 string nextStep = Console.ReadLine();
                 
                 //The value entered by the user will determine the next steps the program takes
