@@ -2,27 +2,29 @@
 {
     public class Room
     {
+        private string name;
         private string description;
+        private string item;
 
-        public string Rooms(string description)
+        public string Room(string description, string item, string name)
         {
             this.description = description;
+            this.item = item;
+            this.name = name;
+            
+        }
+
+        //Returns description of the room
+        public string GetDescription()
+        {
             return description;
         }
 
-        public string GetDescription(string RoomName)
+        //Return item
+        public string GetItem()
         {
-           string description = "A bedroom with a single bed, a desk, a cupboard and chairs";
-            if (RoomName == "bathroom")
-            {
-                description = "A bathroom with a single toilet, a bathtub, a cupboard and a sink";
-            }
-            else if (RoomName =="dining room")
-            {
-                description = "A dining room with a dining table,  cutlery and drawers ";
-            }
-            //in main program, use try and catch to prevent user from entering ints or dec, and ensure inputs are: bedroom,bathroon,diningroom
-            return description;
+            return item;
         }
+
     }
 }
