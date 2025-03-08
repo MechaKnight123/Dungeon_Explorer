@@ -15,13 +15,23 @@ namespace DungeonExplorer
             Health = health;
             
         }
+
+        // Method adds item to the inventory
         public void PickUpItem(string item)
         {
-
+            inventory.Add(item);
         }
+
+        //Joins items in the inventory together
         public string InventoryContents()
         {
             return string.Join(", ", inventory);
+        }
+
+        //Checks if item already exists in the inventory
+        public bool DoesItemExist(string item)
+        {
+            return inventory.Any(x => x.Equals(item, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
