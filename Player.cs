@@ -13,7 +13,7 @@ namespace DungeonExplorer
         {
             Name = name;
             Health = health;
-            Console.WriteLine("Player name is: "+ Name+ " and current health is: "+Health);
+            
         }
         public void PickUpItem(string item)
         {
