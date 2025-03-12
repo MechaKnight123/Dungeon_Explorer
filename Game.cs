@@ -32,8 +32,8 @@ namespace DungeonExplorer
 
             while (playing)
             {
-                //Asks user to enter 1, 2 or 3
-                string initialIntro = "Enter 1 to add an item, 2. to view room's description and 3. to get current items and health.";
+                //Asks user to enter 1, 2, 3 or 4
+                string initialIntro = "Enter 1 to add an item, 2. to view room's description, 3. to get current items and health and 4. to exit the program";
                
                 //An intro message to the game is displayed and users input is store in the variable nextStep 
                 Console.WriteLine($"\nHey {playersName}. Welcome to the dungeons! \n{initialIntro}");
@@ -53,6 +53,11 @@ namespace DungeonExplorer
                 {
                     //Displays inventory and health when user enters 3
                     Console.WriteLine($"You have these items: {player.InventoryContents()}. \nYour health is: {player.Health}");
+                }
+                else if (string.Equals("4", nextStep, StringComparison.OrdinalIgnoreCase))
+                {
+                    // The user will exit the program when they have entered the number 4
+                    playing = false;
                 }
                 else
                 {   
