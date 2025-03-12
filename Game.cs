@@ -53,6 +53,10 @@ namespace DungeonExplorer
                 {
                     //Displays inventory and health when user enters 3
                     Console.WriteLine($"You have these items: {player.InventoryContents()}. \nYour health is: {player.Health}");
+                    if (player.InventoryContents() == "")
+                    {
+                        Console.WriteLine("You currently have no items in your inventory");
+                    }
                 }
                 else if (string.Equals("4", nextStep, StringComparison.OrdinalIgnoreCase))
                 {
