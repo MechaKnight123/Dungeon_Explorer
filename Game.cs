@@ -26,7 +26,7 @@ namespace DungeonExplorer
             }
 
             playing = true;
-            Console.WriteLine("Enter your name: ");
+            Console.Write("Enter your name: ");
             string playersName = Console.ReadLine();
             player = new Player(playersName, 5); // Player object has been created with name inputted by user and health of 5 set by default
 
