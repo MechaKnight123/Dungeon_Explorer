@@ -7,12 +7,17 @@ namespace DungeonExplorer
     {
         private Player player;
         private Room currentRoom;
-        
+        public Room Room1, Room2, Room3, Room4;
         
         public Game()
         {
-            // Initialize the game with one room with a description, item and a name
-            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Patio");
+            // Initialize the game with 4 rooms with a description, item and a name- there is a current room to indicate the room the user is in
+            //User starts the Game in Precious patio room
+            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio");
+            Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio");
+            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon");
+            Room3 = new Room("This is the Snappy Crocodile's swamp", "Poison Potion", "Snappy swamp");
+            Room4 = new Room("This is the Dark Knight's domain", "Fireball potion", "Dark Knight's potion");
         }
         public void Start()
         {
