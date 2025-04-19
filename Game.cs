@@ -21,6 +21,7 @@ namespace DungeonExplorer
             Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp");
             Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion");
             Room5=new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature","Healing potion","Krusty Krab's Lagoon")
+           
             //Created a list containing the names of the rooms in the game
             roomList.Add(Room1.GetName());
             roomList.Add(Room2.GetName());
@@ -41,7 +42,7 @@ namespace DungeonExplorer
             playing = true;
             Console.Write("Enter your name: ");
             string playersName = Console.ReadLine();
-            player = new Player(playersName, 5); // Player object has been created with name inputted by user and health of 5 set by default
+            player = new Player(playersName); // Player object has been created with name inputted by user 
 
             while (playing)
             {
