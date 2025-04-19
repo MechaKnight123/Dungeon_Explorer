@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace DungeonExplorer
 {
@@ -11,3 +11,4 @@ namespace DungeonExplorer
 		
 	}
 }
+
