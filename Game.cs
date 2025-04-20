@@ -8,7 +8,7 @@ namespace DungeonExplorer
     {
         private Player player;
         private Room currentRoom;
-        private Room Room1, Room2, Room3, Room4;
+        private Room Room1, Room2, Room3, Room4, Room5;
         public List<string> roomList = new List<string>();
 
         public Game()
@@ -27,6 +27,7 @@ namespace DungeonExplorer
             roomList.Add(Room2.GetName());
             roomList.Add(Room3.GetName());
             roomList.Add(Room4.GetName());
+            roomList.Add(Room5.GetName());
         }
         public void Start()
         {
@@ -42,7 +43,7 @@ namespace DungeonExplorer
             playing = true;
             Console.Write("Enter your name: ");
             string playersName = Console.ReadLine();
-            player = new Player(playersName); // Player object has been created with name inputted by user 
+            player = new Player(playersName,100); // Player object has been created with name inputted by user and health set to 100
 
             while (playing)
             {
