@@ -20,7 +20,7 @@ namespace DungeonExplorer
             Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon");
             Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp");
             Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion");
-            Room5=new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature","Healing potion","Krusty Krab's Lagoon")
+            Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon");
            
             //Created a list containing the names of the rooms in the game
             roomList.Add(Room1.GetName());
