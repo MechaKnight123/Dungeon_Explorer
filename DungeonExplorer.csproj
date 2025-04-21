@@ -50,6 +50,7 @@
     <Compile Include="Room.cs" />
 	<Compile Include="Creature.cs" />
     <Compile Include="Monster.cs" />
+    <Compile Include="IDamageable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
