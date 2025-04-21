@@ -21,6 +21,15 @@ namespace DungeonExplorer
             
         }
 
+        // Copy constructor- this will be used to change the currentRoom
+        public Room(Room other)
+        {
+            description = other.description;
+            item = other.item;
+            name = other.name;
+            key = other.key;
+        }
+
         //Returns description of the room
         public string GetDescription()
         {
