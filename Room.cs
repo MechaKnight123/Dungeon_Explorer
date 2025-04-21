@@ -9,13 +9,15 @@ namespace DungeonExplorer
         private string name;
         private string description;
         private string item;
-        
+        private string key;
 
-        public Room(string description, string item, string name)
+
+        public Room(string description, string item, string name, string key)
         {
             this.description = description;
             this.item = item;
             this.name = name;
+            this.key = key;
             
         }
 
@@ -37,6 +39,11 @@ namespace DungeonExplorer
             return name;
         }
 
+        //Returns the key of the room
+        public string GetKey()
+        {
+            return key;
+        }
 
     }
 

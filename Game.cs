@@ -13,14 +13,14 @@ namespace DungeonExplorer
 
         public Game()
         {
-            // Initialize the game with 5 rooms with a description, item and a name- there is a current room to indicate the room the user is in
+            // Initialize the game with 5 rooms with a description, item, name and a key- there is a current room to indicate the room the user is in
             //User starts the Game in Precious patio room
-            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio");
-            Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio");
-            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon");
-            Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp");
-            Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion");
-            Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon");
+            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio","Room1 key");
+            Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio", "Room1 key");
+            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon", "Room2 key");
+            Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp", "Room3 key");
+            Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion", "Room4 key");
+            Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon", "Room5 key");
            
             //Created a list containing the names of the rooms in the game
             roomList.Add(Room1.GetName());
