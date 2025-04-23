@@ -10,24 +10,25 @@ namespace DungeonExplorer
         private string description;
         private string item;
         private string key;
+        private string monster;
 
-
-        public Room(string description, string item, string name, string key)
+        public Room(string description, string item, string name, string key, string monster)
         {
             this.description = description;
             this.item = item;
             this.name = name;
             this.key = key;
-            
+            this.monster = monster;
         }
 
-        // Copy constructor- this will be used to change the currentRoom
+        // Copy constructor- this will be used to change the values of currentRoom
         public Room(Room other)
         {
             description = other.description;
             item = other.item;
             name = other.name;
             key = other.key;
+            monster = other.monster;
         }
 
         //Returns description of the room
@@ -54,6 +55,11 @@ namespace DungeonExplorer
             return key;
         }
 
+        //Returns the Monster in the room
+        public string GetMonster()
+        {
+            return monster;
+        }
     }
 
     //public class GameMap

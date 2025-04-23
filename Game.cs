@@ -8,26 +8,30 @@ namespace DungeonExplorer
     {
         private Player player;
         private Room currentRoom;
-        private Room Room1, Room2, Room3, Room4, Room5;
+        private Room Room1, Room2, Room3, Room4, Room5,Room6,Room7;
         public List<string> roomList = new List<string>();
 
         public Game()
         {
-            // Initialize the game with 5 rooms with a description, item, name and a key- there is a current room to indicate the room the user is in
+            // Initialize the game with 5 rooms with a description, item, name,key and a monster- there is a current room to indicate the room the user is in
             //User starts the Game in Precious patio room
-            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio","Room1 key");
-            Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio", "Room1 key");
-            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon", "Room2 key");
-            Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp", "Room3 key");
-            Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion", "Room4 key");
-            Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon", "Room5 key");
-           
+            currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio","Room1 key","Petite porcupine");
+            Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio", "Room1 key", "Petite porcupine");
+            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon", "Room2 key","Dragon");
+            Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp", "Room3 key","Snappy the Crocodile");
+            Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion", "Room4 key","Dark Knight");
+            Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon", "Room5 key","Krusty Krab");
+            Room6 = new Room("This is Pleasant Park where there is an ominous and ferocious dog", "Leafblower", "Pleasant Park", "Room6 key","Ferocious Dog");
+            Room7 = new Room("This is Tilted Towers where the buildings are all shaped peculiarly", "Canon", "Tilted Towers", "Room7 key","Tiger Tower");
+
             //Created a list containing the names of the rooms in the game
             roomList.Add(Room1.GetName());
             roomList.Add(Room2.GetName());
             roomList.Add(Room3.GetName());
             roomList.Add(Room4.GetName());
             roomList.Add(Room5.GetName());
+            roomList.Add(Room6.GetName());
+            roomList.Add(Room7.GetName());
         }
         public void Start()
         {

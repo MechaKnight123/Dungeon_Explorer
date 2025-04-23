@@ -34,5 +34,25 @@ namespace DungeonExplorer
         {
             return inventory.Any(x => x.Equals(item, StringComparison.OrdinalIgnoreCase));
         }
+
+        //Player loses health when attacked
+        public override void TakeDamage(int amount)
+        {
+            Health -= amount;
+            Console.WriteLine($"{Name} loses {amount} of health and current health is: {Health}");
+        }
+
+        //When a player attacks, the Monster of that room takes damage, through the TakeDamage function in the Monster file
+        //Damage taken by Monster varies on the item used by player- hence Monster object and item_damage are passed into function
+        public override void Attack(IDamageable target,int item_damage)
+        {
+            if (target is Monster monster)
+            {
+                target.TakeDamage(item_damage);
+            }
+        
+        }
+
+
     }
 }

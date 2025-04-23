@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-	internal interface IDamageable
+	public interface IDamageable
 	{
-        void TakeDamage();
-        void Attack();
+        void TakeDamage(int amount);
+        void Attack(IDamageable target,int damage);
 		
 		
 	}
