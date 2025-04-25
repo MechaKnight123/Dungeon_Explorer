@@ -21,7 +21,7 @@ namespace DungeonExplorer
                 case "Petite porcupine":
                      monster_damage = 5;
                     break;
-                case "Dragon":
+                case "Dangerous Dragon":
                     monster_damage = 10;
                     break;
                 case "Snappy the Crocodile":
@@ -68,5 +68,6 @@ namespace DungeonExplorer
         }
 
     }
+   
 }
 

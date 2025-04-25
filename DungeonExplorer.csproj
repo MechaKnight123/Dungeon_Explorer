@@ -51,6 +51,13 @@
 	<Compile Include="Creature.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="IDamageable.cs" />
+	<Compile Include="Porcupine.cs" />
+	<Compile Include="Dragon.cs" />
+	<Compile Include="Crocodile.cs" />
+	<Compile Include="Knight.cs" />
+	<Compile Include="Crab.cs" />
+	<Compile Include="Dog.cs" />
+	<Compile Include="Tower.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -17,7 +17,7 @@ namespace DungeonExplorer
             //User starts the Game in Precious patio room
             currentRoom = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio","Room1 key","Petite porcupine");
             Room1 = new Room("This is the Precious Patio where unique things happen", "Welcome Mat", "Precious Patio", "Room1 key", "Petite porcupine");
-            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon", "Room2 key","Dragon");
+            Room2 = new Room("This is the Dragon's dungeon where there have been many fallen soldiers", "Diamond Sword", "Dragon's dungeon", "Room2 key","Dangerous Dragon");
             Room3 = new Room("This is the Snappy Crocodile's swamp where things happen unexpectedly quick", "Poison Potion", "Snappy swamp", "Room3 key","Snappy the Crocodile");
             Room4 = new Room("This is the Dark Knight's domain and not many who visit this place are able to tell the tale", "Fireball potion", "Dark Knight's potion", "Room4 key","Dark Knight");
             Room5 = new Room("This is Krusty Krab's lagoon where there is a strange and mysterious creature", "Healing potion", "Krusty Krab's Lagoon", "Room5 key","Krusty Krab");
@@ -32,6 +32,8 @@ namespace DungeonExplorer
             roomList.Add(Room5.GetName());
             roomList.Add(Room6.GetName());
             roomList.Add(Room7.GetName());
+
+            
         }
         public void Start()
         {
