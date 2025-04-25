@@ -18,13 +18,13 @@ namespace DungeonExplorer
 		}
 
         // Base methods/ functions from IDamageable - will be overrided in Monster and Player files
-        public virtual void TakeDamage(int amount) 
+        public virtual void TakeDamage(int amount)
         {
             Health -= amount;
             Console.WriteLine($"{Name} loses {amount} of health and current health: {Health}");
         }
 
-        public virtual void Attack(IDamageable target,int damage)
+        public virtual void Attack(IDamageable target, int damage)
         {
             Console.WriteLine("Default");
         }
