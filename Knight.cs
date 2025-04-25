@@ -24,7 +24,7 @@ namespace DungeonExplorer
             if (target is Player player)
             {
                 Console.WriteLine($"{Name} slashes you");
-                target.TakeDamage(monster_damage);
+                player.TakeDamage(monster_damage);
             }
         }
     }

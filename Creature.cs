@@ -7,7 +7,7 @@ namespace DungeonExplorer
     //abstract class inherits from interface IDamageable
 	public abstract class Creature: IDamageable
 	{
-        public string Name { get; private set; }
+        public string Name { get; protected set; }
         public int Health { get; protected set; }
 
         //Constructor

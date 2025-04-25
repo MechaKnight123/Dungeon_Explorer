@@ -25,7 +25,7 @@ namespace DungeonExplorer
             if (target is Player player)
             {
                 Console.WriteLine($"{Name} takes a massive bite on you ");
-                target.TakeDamage(monster_damage);
+                player.TakeDamage(monster_damage);
             }
         }
 

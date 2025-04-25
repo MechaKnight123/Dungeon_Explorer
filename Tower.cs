@@ -24,7 +24,7 @@ namespace DungeonExplorer
             if (target is Player player)
             {
                 Console.WriteLine($"{Name} hits you with a wall");
-                target.TakeDamage(monster_damage);
+                player.TakeDamage(monster_damage);
             }
         }
     }

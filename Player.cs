@@ -48,7 +48,11 @@ namespace DungeonExplorer
         {
             if (target is Monster monster)
             {
-                target.TakeDamage(item_damage);
+                monster.TakeDamage(item_damage);
+            }
+            else
+            {
+                Console.WriteLine("There is nothing to attack here");
             }
         
         }
