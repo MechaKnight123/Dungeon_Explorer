@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-public class Inventory
+
+namespace DungeonExplorer
 {
-	public Inventory()
+	public class Inventory
 	{
+		public Inventory()
+		{
+		}
 	}
+
 }
