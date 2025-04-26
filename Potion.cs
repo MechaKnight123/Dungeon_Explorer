@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-	public class Potion
+	class Potion : Item
 	{
-		public Potion()
-		{
-		}
+		//Constructor
+		//Inheritance is used to get values that will be needed to initialise the Potion object
+		public Potion(string itemname, int itemdamage) : base(itemname, itemdamage) { }
+	
+		
 	}
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-	public class Weapon
+	class Weapon : Item
 	{
-		public Weapon()
-		{
-		}
+		//Constructor
+		//Inheritance is used to create/ initialise a weapon object
+		public Weapon(string itemname, int itemdamage) : base(itemname, itemdamage) { }
+		
 	}
 
 }
