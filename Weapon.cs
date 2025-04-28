@@ -10,7 +10,7 @@ namespace DungeonExplorer
 	{
 		//Constructor
 		//Inheritance is used to create/ initialise a weapon object
-		public Weapon(string itemname, int itemdamage) : base(itemname, itemdamage) { }
+		public Weapon(string itemname, int itemamount) : base(itemname, itemamount) { }
 		
 	}
 

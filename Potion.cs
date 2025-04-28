@@ -10,7 +10,7 @@ namespace DungeonExplorer
 	{
 		//Constructor
 		//Inheritance is used to get values that will be needed to initialise the Potion object
-		public Potion(string itemname, int itemdamage) : base(itemname, itemdamage) { }
+		public Potion(string itemname, int itemamount) : base(itemname, itemamount) { }
 	
 		
 	}

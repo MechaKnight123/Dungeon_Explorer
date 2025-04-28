@@ -24,7 +24,7 @@ namespace DungeonExplorer
             player.PickUpItem(itemName);
         }
 
-        public virtual void Use(Player player);
+        public virtual void Use(Player player, Monster monster);
 
     }
 }
