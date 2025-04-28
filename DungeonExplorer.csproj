@@ -57,7 +57,17 @@
 	<Compile Include="Knight.cs" />
 	<Compile Include="Crab.cs" />
 	<Compile Include="Dog.cs" />
-	<Compile Include="Tower.cs" />
+	<Compile Include="ICollectible.cs" />
+	<Compile Include="Item.cs" />
+	<Compile Include="WelcomeMat.cs" />
+	<Compile Include="Potion.cs" />
+	<Compile Include="Weapon.cs" />
+	<Compile Include="DiamonSword.cs" />
+	<Compile Include="FireballPotion.cs" />
+	<Compile Include="PoisonPotion.cs" />
+	<Compile Include="HealingPotion.cs" />
+	<Compile Include="LeafBlower.cs" />
+	<Compile Include="Canon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
