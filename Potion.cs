@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-	class Potion : Item
+	public abstract class Potion : Item
 	{
 		//Constructor
 		//Inheritance is used to get values that will be needed to initialise the Potion object

@@ -7,7 +7,7 @@ using System.Media;
 
 namespace DungeonExplorer
 {
-    class Player: Creature
+    public class Player: Creature
     {
         
         private List<string> inventory = new List<string>();
@@ -55,6 +55,13 @@ namespace DungeonExplorer
                 Console.WriteLine("There is nothing to attack here");
             }
         
+        }
+
+        //Healing Potion cannot access the protected health of the player as it does not inherit from creature so this function is used to allow player to heal
+        public void Heal(int amount)
+        {
+            Health += amount;
+            Console.WriteLine($"{Name} heals for {amount} points! Current health: {Health}");
         }
 
 

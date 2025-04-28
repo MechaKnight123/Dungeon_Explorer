@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-    class Monster : Creature
+    public class Monster : Creature
 	{
         private int monster_damage;
         //A constructor and inheritance has been used to create the Monster object 

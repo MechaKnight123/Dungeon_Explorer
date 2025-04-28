@@ -12,17 +12,17 @@ namespace DungeonExplorer
         public HealingPotion(string itemname, int itemamount) : base(itemname, itemamount) { }
 
         //Writes in the console that the user has picked up this item, and actually adds to inventory
-        public virtual void OnCollect(Player player)
+        public override void OnCollect(Player player)
         {
             Console.WriteLine($"{player.Name} picked up {itemName}");
             player.PickUpItem(itemName);
         }
 
         //Explains the effect of using item
-        public virtual void Use(Player player, Monster monster)
+        public override void Use(Player player, Monster monster)
         {
             Console.WriteLine($"{player.Name} heals by using the {itemName} by {itemAmount} ");
-            player.Health+= itemAmount
+            player.Heal(itemAmount);
         }
 
     }

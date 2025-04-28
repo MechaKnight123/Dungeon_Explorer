@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DungeonExplorer
 {
-	class Weapon : Item
+	public abstract class Weapon : Item
 	{
 		//Constructor
 		//Inheritance is used to create/ initialise a weapon object
