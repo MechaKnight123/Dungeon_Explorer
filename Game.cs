@@ -13,7 +13,7 @@ namespace DungeonExplorer
         public Game()
         {
             gameMap = new GameMap();
-
+             
         }
         public void Start()
         {
@@ -24,6 +24,10 @@ namespace DungeonExplorer
             {
                 Console.WriteLine("Goodbye!");
                 return;
+            }
+            else
+            {
+                Console.WriteLine("Welcome to Dungeon Explorer");
             }
 
             playing = true;
@@ -75,6 +79,13 @@ namespace DungeonExplorer
         private void PickUpItem()
         {
             Room room = gameMap.CurrentRoom;
+            //when user wants to pick up an item that doesnt exist, this message will be returned
+            if (room.ItemInRoom == null)
+            {
+                Console.WriteLine("There is no item in this room.");
+                return;
+            }
+
             string itemName = room.ItemInRoom.itemName;
             bool ownItem = player.DoesItemExist(itemName);
             if (ownItem)

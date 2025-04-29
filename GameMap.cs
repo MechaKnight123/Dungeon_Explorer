@@ -17,8 +17,8 @@ namespace DungeonExplorer
 		{
             SetupRooms();
         }
-		private void SetupRooms()
-		{
+        private void SetupRooms()
+        {
 
             // Initialize the game with 5 rooms with a description, item, name,key and a monster- there is a current room to indicate the room the user is in
             //User starts the Game in Precious patio room    
@@ -48,8 +48,35 @@ namespace DungeonExplorer
             Room6.ItemInRoom = new LeafBlower("Leafblower", 10);
             Room7.ItemInRoom = new Canon("Canon", 55);
 
+            //user starts in Room1
             CurrentRoom = Room1;
+
+            //Add Room objects to the rooms list- will be used to move between rooms 
+            rooms.Add(Room1);
+            rooms.Add(Room2);
+            rooms.Add(Room3);
+            rooms.Add(Room4);
+            rooms.Add(Room5);
+            rooms.Add(Room6);
+            rooms.Add(Room7);
         }
+        
+        //Allows the user to  move between rooms- goes in order of the list
+        public void MoveToNextRoom()
+            {
+              int index = rooms.IndexOf(CurrentRoom);
+              if (index < rooms.Count - 1)
+              {
+                 CurrentRoom = rooms[index + 1];
+                 Console.WriteLine("You move to the next room...");
+              }
+              else
+              {
+                 Console.WriteLine("There are no more rooms. You've reached the end of the dungeon!");
+              }
+        }
+
     }
+    
 
 }
