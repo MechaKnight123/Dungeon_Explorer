@@ -34,6 +34,15 @@ namespace DungeonExplorer
             Room6.Occupant = new Dog("Ferocious Dog",50);
             Room7.Occupant = new Tower("Tiger Tower",55);
 
+            //Every room has a Item with itemName and itemAmount and will either be a Potion or Weapon
+            currentRoom.ItemInRoom = new WelcomeMat("Welcome Mat", 30);
+            Room1.ItemInRoom = new WelcomeMat("Welcome Mat", 30);
+            Room2.ItemInRoom = new DiamondSword("Diamond Sword", 50);
+            Room3.ItemInRoom = new PoisonPotion("Poison Potion", 35);
+            Room4.ItemInRoom = new FireballPotion("Fireball potion", 40);
+            Room5.ItemInRoom = new HealingPotion("Healing potion", 100);
+            Room6.ItemInRoom = new LeafBlower("Leafblower", 10);
+            Room7.ItemInRoom = new Canon("Canon", 55);
 
         }
         public void Start()
