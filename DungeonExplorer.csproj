@@ -69,6 +69,7 @@
 	<Compile Include="LeafBlower.cs" />
 	<Compile Include="Canon.cs" />
 	<Compile Include="Tower.cs" />
+	<Compile Include="GameMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
