@@ -8,15 +8,27 @@ namespace DungeonExplorer
     {
         private Player player;
         private GameMap gameMap;
+
+        //Dictionary is used to create key pair values that will be used when user uses an items in inventory
+        //maps strings and objects
+        private Dictionary<string, Item> allItems = new Dictionary<string, Item>(StringComparer.OrdinalIgnoreCase);
         
 
         public Game()
         {
             gameMap = new GameMap();
-             
+            
         }
         public void Start()
         {
+            allItems.Add("Welcome Mat", new WelcomeMat("Welcome Mat", 30));
+            allItems.Add("Diamond Sword", new DiamondSword("Diamond Sword", 50));
+            allItems.Add("Poison Potion", new PoisonPotion("Poison Potion", 35));
+            allItems.Add("Fireball potion", new FireballPotion("Fireball potion", 40));
+            allItems.Add("Healing potion", new HealingPotion("Healing potion", 100));
+            allItems.Add("Leafblower", new LeafBlower("Leafblower", 10));
+            allItems.Add("Canon", new Canon("Canon", 55));
+
             bool playing = false;
             Console.WriteLine("Are you ready to start? Enter y/n"); //Asks the user if they want to start the game
             string input = Console.ReadLine();
@@ -34,9 +46,13 @@ namespace DungeonExplorer
             Console.Write("Enter your name: ");
             string playersName = Console.ReadLine();
             player = new Player(playersName,100); // Player object has been created with name inputted by user and health set to 100
+            
             while (playing)
             {
+                //sets up currentRoom and tells the user where they are
                 Room currentRoom = gameMap.CurrentRoom;
+                Console.WriteLine($"You are currently in {currentRoom.name} and the item in the room is {currentRoom.ItemInRoom.itemName}");
+
                 //Asks user to enter 1, 2, 3 or 4
                 string initialIntro = "Enter 1 to add an item, 2. to view room's description, 3. to get current items and health and 4. to exit the program";
                
@@ -74,7 +90,67 @@ namespace DungeonExplorer
                     Console.WriteLine($"Invalid input. \n {initialIntro}");
                 }
 
+                //Outputs the name of the Monster in the room
+                if (currentRoom.Occupant != null)
+                {
+                    Console.WriteLine($"A {currentRoom.Occupant.Name} is here!");
+
+                }
+                else
+                {
+                    Console.WriteLine("There is no Monsters in the room");
+                }
+
+                //Asking the user if they would like to attack the monster
+                Console.WriteLine($"Would you like to attack the {currentRoom.Occupant?.Name}? (Y/N)");
+                string attackChoice = Console.ReadLine()?.Trim().ToUpper();
+
+                if (attackChoice == "Y")
+                {
+                    Console.Write("What item do you want to use? ");
+                    string itemToUse = Console.ReadLine()?.Trim();
+
+                    //once the user decides what item to use,the appropriate operation will be carried out
+                    if (string.IsNullOrWhiteSpace(itemToUse))
+                    {
+                        Console.WriteLine("No item input received.");
+                    }
+                    //checks if item is in the inventory
+                    else if (!player.DoesItemExist(itemToUse))
+                    {
+                        Console.WriteLine("That item is not in your inventory.");
+                    }
+                    //check if item is missing in dictionary
+                    else if (!allItems.TryGetValue(itemToUse, out Item item))
+                    {
+                        Console.WriteLine("Item exists in inventory, but not found in master dictionary.");
+                    }
+                    //checks if there is a monster in the room
+                    else if (!(currentRoom.Occupant is Monster monster))
+                    {
+                        Console.WriteLine("There is no monster in this room to attack.");
+                    }
+                    else
+                    {
+                        // All checks passed — use the item
+                        int effect = item.Use(player, monster);
+
+                        if (item is HealingPotion)
+                        {
+                            // Healing logic already handled inside Use()
+                        }
+                        else
+                        {
+                            // Attack the monster
+                            player.Attack(monster, effect);
+                        }
+                    }
+                }
+
+
+
             }
+           
         }
         private void PickUpItem()
         {
@@ -97,10 +173,13 @@ namespace DungeonExplorer
                 //if ownItem is false- item doesnt exist in inventory, Item is successfully added to the inventory
                 room.ItemInRoom.OnCollect(player); // Adds item via the item class
                 Console.WriteLine($"You have successfully picked up item: {itemName}");
-                room.ItemInRoom = null; // Remove item from room after pickup
-               
+                
+            
             }
+
+
         }
+
     }
 }
 

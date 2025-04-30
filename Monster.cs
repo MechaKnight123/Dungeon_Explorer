@@ -13,6 +13,16 @@ namespace DungeonExplorer
         //Monster Class inherits from Creature
         public Monster(string name, int health) : base(name, health) { }
 
+        public override void TakeDamage(int amount)
+        {
+            Health -= amount;
+            Console.WriteLine($"{Name} (monster) takes {amount} damage! Remaining health: {Health}");
+
+            if (Health <= 0)
+            {
+                Console.WriteLine($"{Name} has been defeated!");
+            }
+        }
         //Use if statements with the name of the monster and return different damages and different monsters do diff damages
         public int monsterDamage(string monster)
         {

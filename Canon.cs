@@ -19,10 +19,10 @@ namespace DungeonExplorer
         }
 
         //Explains the effect of using item
-        public override void Use(Player player, Monster monster)
+        public override int Use(Player player, Monster monster)
         {
             Console.WriteLine($"{player.Name} blasts the {monster.Name} by using the {itemName} by {itemAmount} ");
-            player.Attack(monster, itemAmount);
+            return itemAmount;
         }
 
     }

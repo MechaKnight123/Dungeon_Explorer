@@ -20,7 +20,9 @@ namespace DungeonExplorer
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Oops....{ex.Message}");
-                }
+                    Console.WriteLine("Press any key to exit...");
+                    Console.ReadKey();
+            }
             
         }
     }

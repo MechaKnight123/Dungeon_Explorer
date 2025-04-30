@@ -24,9 +24,10 @@ namespace DungeonExplorer
             player.PickUpItem(itemName);
         }
 
-        public virtual void Use(Player player, Monster monster)
+        public virtual int Use(Player player, Monster monster)
         {
             Console.WriteLine("Default");
+            return 0;
         }
 
     }

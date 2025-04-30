@@ -11,7 +11,7 @@ namespace DungeonExplorer
 	{
 		//Void functions that will be used by items
 		void OnCollect(Player player);
-		void Use(Player player, Monster monster);
+		int Use(Player player, Monster monster);
 
 	}
 

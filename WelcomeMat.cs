@@ -8,7 +8,8 @@ namespace DungeonExplorer
 {
 	public class WelcomeMat:Weapon
 	{
-        //initialise Welcome Mat by using inherited values of itemname and itemdamage
+        //initialise Welcome Mat by using i
+        //inherited values of itemname and itemdamage
 		public WelcomeMat(string itemname, int itemamount) : base(itemname, itemamount) { }
 
         //Writes in the console that the user has picked up this item, and actually adds to inventory
@@ -19,10 +20,10 @@ namespace DungeonExplorer
         }
 
         //Explains the effect of using item
-        public override void Use(Player player, Monster monster)
+        public override int Use(Player player, Monster monster)
         {
             Console.WriteLine($"{player.Name} whacks with the {itemName} and causes {itemAmount} damage!");
-            player.Attack(monster, itemAmount);
+            return itemAmount;
         }
 
     }

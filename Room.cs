@@ -6,7 +6,7 @@ namespace DungeonExplorer
 {
     public class Room
     {
-        private string name;
+        public string name;
         private string description;
         private string item;
         private string key;
