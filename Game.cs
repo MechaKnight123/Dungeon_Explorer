@@ -21,6 +21,7 @@ namespace DungeonExplorer
         }
         public void Start()
         {
+            ManualTests.RunAll();
             allItems.Add("Welcome Mat", new WelcomeMat("Welcome Mat", 30));
             allItems.Add("Diamond Sword", new DiamondSword("Diamond Sword", 50));
             allItems.Add("Poison Potion", new PoisonPotion("Poison Potion", 35));

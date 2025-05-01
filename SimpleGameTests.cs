@@ -15,7 +15,7 @@ namespace DungeonExplorer
             Test_PlayerInventoryShowsCorrectly();
             Test_RoomOccupantIsStored();
 
-            Console.WriteLine("\n All manual tests completed.");
+            Console.WriteLine("\nAll manual tests completed.");
         }
 
         //used to check if the player can pick up an item - just used Welcome Mat as an example
