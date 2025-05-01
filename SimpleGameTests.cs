@@ -13,6 +13,7 @@ namespace DungeonExplorer
             Test_PlayerCanPickUpItem();
             Test_WeaponDamagesMonster();
             Test_PlayerInventoryShowsCorrectly();
+            Test_RoomOccupantIsStored();
 
             Console.WriteLine("\n All manual tests completed.");
         }
@@ -57,7 +58,17 @@ namespace DungeonExplorer
                 : "Test_PlayerInventoryShowsCorrectly failed.");
         }
 
+        //Checking if Occupant in the GameMap file for each room is stored correctly
+        private static void Test_RoomOccupantIsStored()
+        {
+            var room = new Room("Room desc", "Item desc", "Room name", "Key");
+            var monster = new Dragon("Dragon", 80);
+            room.Occupant = monster;
 
+            Console.WriteLine(room.Occupant?.Name == "Dragon"
+                ? "Test_RoomOccupantIsStored passed."
+                : "Test_RoomOccupantIsStored failed.");
+        }
 
 
 
