@@ -145,6 +145,12 @@ namespace DungeonExplorer
                             player.Attack(monster, effect);
                         }
                     }
+
+                    //the user will move to the next room if the monster's health is 0 or less
+                    if (currentRoom.Occupant.Health<=0)
+                    {
+                        gameMap.MoveToNextRoom();
+                    }
                 }
 
 
