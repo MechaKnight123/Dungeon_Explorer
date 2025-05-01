@@ -51,6 +51,15 @@ namespace DungeonExplorer
             {
                 //sets up currentRoom and tells the user where they are
                 Room currentRoom = gameMap.CurrentRoom;
+                
+                //when the player's health is below or equal to 0, player has lost the game
+                if (player.Health <= 0)
+                {
+                    Console.WriteLine("You have lost the game:(");
+                    break;
+
+                }
+
                 Console.WriteLine($"You are currently in {currentRoom.name} and the item in the room is {currentRoom.ItemInRoom.itemName}");
 
                 //Asks user to enter 1, 2, 3 or 4
