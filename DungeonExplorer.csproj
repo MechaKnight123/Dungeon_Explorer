@@ -70,6 +70,7 @@
 	<Compile Include="Canon.cs" />
 	<Compile Include="Tower.cs" />
 	<Compile Include="GameMap.cs" />
+    <Compile Include="SimpleGameTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
