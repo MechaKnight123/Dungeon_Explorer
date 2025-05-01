@@ -11,7 +11,8 @@ namespace DungeonExplorer
 
             //tests to be run should be run below
             Test_PlayerCanPickUpItem();
-            Test_WeaponDamagesMonster()
+            Test_WeaponDamagesMonster();
+            Test_PlayerInventoryShowsCorrectly();
 
             Console.WriteLine("\n All manual tests completed.");
         }
@@ -44,7 +45,18 @@ namespace DungeonExplorer
                 : "Test_WeaponDamagesMonster failed.");
         }
 
-        
+        //ensuring that user can pick up an item and add it to their inventory
+        private static void Test_PlayerInventoryShowsCorrectly()
+        {
+            var player = new Player("TestPlayer", 100);
+            var sword = new DiamondSword("Diamond Sword", 50);
+            sword.OnCollect(player);
+
+            Console.WriteLine(player.InventoryContents().Contains("Diamond Sword")
+                ? "Test_PlayerInventoryShowsCorrectly passed."
+                : "Test_PlayerInventoryShowsCorrectly failed.");
+        }
+
 
 
 
