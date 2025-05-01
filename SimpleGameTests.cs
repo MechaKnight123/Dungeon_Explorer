@@ -11,6 +11,7 @@ namespace DungeonExplorer
 
             //tests to be run should be run below
             Test_PlayerCanPickUpItem();
+            Test_WeaponDamagesMonster()
 
             Console.WriteLine("\n All manual tests completed.");
         }
@@ -27,8 +28,23 @@ namespace DungeonExplorer
                 : "Test_PlayerCanPickUpItem failed.");
         }
 
+        //used to check effect of a weapon being used on a monster
+        private static void Test_WeaponDamagesMonster()
+        {
+            //setting up test variables to see effect of a weapon being used on a monster
+            var player = new Player("TestPlayer", 100);
+            var monster = new Dragon("Test Dragon", 100);
+            var weapon = new DiamondSword("Diamond Sword", 50);
 
+            int damage = weapon.Use(player, monster);
+            player.Attack(monster, damage);
 
+            Console.WriteLine(monster.Health < 100//if the monster's health goes down after using the weapon then this test will be successful
+                ? "Test_WeaponDamagesMonster passed."
+                : "Test_WeaponDamagesMonster failed.");
+        }
+
+        
 
 
 
