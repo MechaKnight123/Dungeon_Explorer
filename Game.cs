@@ -146,14 +146,28 @@ namespace DungeonExplorer
                         }
                     }
 
-                    //the user will move to the next room if the monster's health is 0 or less
-                    if (currentRoom.Occupant.Health<=0)
-                    {
-                        gameMap.MoveToNextRoom();
-                    }
+                    
+                    
+                        
+                    
+                }
+                else
+                {
+                    Console.WriteLine($"You have not attacked the{currentRoom.Occupant.Name} this turn");
                 }
 
-
+                //the user will move to the next room if the monster's health is 0 or less
+                if (currentRoom.Occupant.Health <= 0)
+                {
+                    gameMap.MoveToNextRoom();
+                }
+                else if (currentRoom.Occupant is Monster monster && currentRoom.Occupant.Health > 0)
+                {
+                    //if the monster's health is not 0 then the monster will attack the user every turn
+                    int damage = monster.monsterDamage(currentRoom.Occupant.Name);
+                    monster.Attack(player, damage);
+                    Console.WriteLine(player.Health);
+                }
 
             }
            
