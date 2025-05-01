@@ -160,6 +160,11 @@ namespace DungeonExplorer
                 if (currentRoom.Occupant.Health <= 0)
                 {
                     gameMap.MoveToNextRoom();
+                    //breaks the loop once the user defeats the final monster
+                    if (currentRoom.Occupant is Tower tiger)
+                        {
+                             break;
+                        }
                 }
                 else if (currentRoom.Occupant is Monster monster && currentRoom.Occupant.Health > 0)
                 {
